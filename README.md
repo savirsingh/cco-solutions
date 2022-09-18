@@ -1,2 +1,2 @@
-# cco-solutions
-C++ Solutions For University of Waterloo CCO
+# CCO Solutions
+Canadian Computing Olympiad solutions in C++.
