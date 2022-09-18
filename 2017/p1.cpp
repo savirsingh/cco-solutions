@@ -1,5 +1,5 @@
 // code by savir singh
-// 15/15 on DMOJ & CCC Grader
+// 25/25 on DMOJ & CCC Grader
 
 #include <bits/stdc++.h>
 using namespace std;
