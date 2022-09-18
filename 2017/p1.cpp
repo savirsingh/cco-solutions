@@ -1,6 +1,3 @@
-// code by savir singh
-// 25/25 on DMOJ & CCC Grader
-
 #include <bits/stdc++.h>
 using namespace std;
 // macros
@@ -20,33 +17,38 @@ using namespace std;
 // driver code
 bit32 main()
 {
+    // initializing everything and reading k
     int k;
     scani(k);
-    int v=0, e=0;
+    int v=0;
     int a=1, b=2;
     int b_=0;
     vector<vector<int>> output;
     while (k>0) {
-        int n = (1+pow((1+8*k), 0.5))/2;
-        v+=n;
+        int n = (1+pow((1+8*k), 0.5))/2; // quadratic formula
+        v+=n; // increase vertices/nodes counter
         for (int i=0; i<n-1; i++) {
+            // iterate n-1 times and add a, b to output
             vector<int> s = {a, b};
             output.pb(s);
-            a++; b++;
+            a++; b++; // add 1 to a, b
         }
         if (b_!=0) {
+            // if there's a b_ value, add it to the output
             vector<int> s = {a, b_};
             output.pb(s);
             b_=0;
         }
-        vector<int> s = {1, a};
-        output.pb(s);
-        b_=b;
-        a++; b++;
-        k-=n*(n-1)/2;
+        vector<int> s = {1, a}; // attach node 1 to node a
+        output.pb(s); // add 1, a to output
+        b_=b; // store that last value of b in b_
+        a++; b++; // add 1 to a, b
+        k-=n*(n-1)/2; // break down k
     }
+    // output v, e
     printi(v); print(" "); printi(output.size()); print("\n");
     for (vector<int> a : output) {
+        // output the entire output at once
         printi(a[0]); print(" "); printi(a[1]); print("\n");
     }
 }
