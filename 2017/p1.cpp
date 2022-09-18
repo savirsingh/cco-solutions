@@ -1,3 +1,7 @@
+// code by savir singh
+// 15/15 on DMOJ & CCC Grader
+// added comments to whole code
+
 #include <bits/stdc++.h>
 using namespace std;
 // macros
